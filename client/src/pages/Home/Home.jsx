@@ -1,36 +1,25 @@
-import { useState } from 'react'
-import './Home.css'
+import { useContext, useState } from 'react'
 import amazonLogo from '../../assets/logos/amazon.png'
 import flipkartLogo from '../../assets/logos/flipkart.png'
+import { SearchContext } from '../../context/SearchContext'
+import { Searchbar } from '../../components/searchbar/SearchBar'
+import './Home.css'
 export const Home = () => {
-    const [searchbar, setSearchbar] = useState('')
+    const {searchTerm, setSearchTerm} = useContext(SearchContext)
     const handleInput = (e) => {
-        setSearchbar(e.target.value)
+        setSearchTerm(e.target.value)
     }
     return (
         <div className="home">
-            <nav>
-                <h2 className='nav-logo'>SnapShop</h2>
-                <ul className="nav-menu">
-                    <li className="nav-menu primary">Categories</li>
-                    <li className="nav-menu primary">Deals</li>
-                    <li className="nav-menu primary">About</li>
-                </ul>
-            </nav>
             <section className="hero">
                 <h1 className="hero-heading">
                     Compare Prices of Electronics Across Top Stores
-
-                </h1>
+                 </h1>
                 <p className="hero-subheading">
                     Find the Best Deals on Mobiles, Laptops, Headphones & More
-
                 </p>
-                <div className="hero-search">
-                    <input type="text" placeholder="Search products..." name='searchbar' value={searchbar} onChange={handleInput} />
-                    <button aria-label='Compare Prices' className="btn-primary">Compare Prices</button>
-                </div>
             </section>
+            <Searchbar/>
             <section className='how-it-works'>
                 <div className='section-title'>How SnapShop Works</div>
                 <div className='steps'>
@@ -67,7 +56,6 @@ export const Home = () => {
                     <a href="https://github.com/rehan7077" target="_blank" rel="noopener noreferrer">GitHub</a>
                     <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     <span className="tech-stack">Tech Stack: React, Node.js, Express, MongoDB</span>
-
                 </div>
                 <p className="copyright">
                     &copy; {new Date().getFullYear()} SnapShop. All rights reserved.
