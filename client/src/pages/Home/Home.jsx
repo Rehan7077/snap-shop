@@ -1,25 +1,22 @@
-import { useContext, useState } from 'react'
+
 import amazonLogo from '../../assets/logos/amazon.png'
 import flipkartLogo from '../../assets/logos/flipkart.png'
-import { SearchContext } from '../../context/SearchContext'
 import { Searchbar } from '../../components/searchbar/SearchBar'
 import './Home.css'
+
 export const Home = () => {
-    const {searchTerm, setSearchTerm} = useContext(SearchContext)
-    const handleInput = (e) => {
-        setSearchTerm(e.target.value)
-    }
+   
     return (
         <div className="home">
             <section className="hero">
                 <h1 className="hero-heading">
                     Compare Prices of Electronics Across Top Stores
-                 </h1>
+                </h1>
                 <p className="hero-subheading">
                     Find the Best Deals on Mobiles, Laptops, Headphones & More
                 </p>
             </section>
-            <Searchbar/>
+            <Searchbar />
             <section className='how-it-works'>
                 <div className='section-title'>How SnapShop Works</div>
                 <div className='steps'>
