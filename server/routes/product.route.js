@@ -32,6 +32,7 @@ router.get("/products/:id", async (req, res) => {
         message: "Missing required paramter: 'id'",
       });
     }
+
     const id = req.params.id;
     const product = await Product.findById(id);
     res.json(product);
