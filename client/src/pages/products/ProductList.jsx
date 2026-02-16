@@ -1,4 +1,5 @@
 import { useSearchParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { Searchbar } from "../../components/searchbar/SearchBar"
 import { useEffect, useState } from "react"
 import "./ProductList.css"
@@ -6,7 +7,6 @@ import "./ProductList.css"
 export const ProductList = () => {
   const [searchParams] = useSearchParams()
   const query = searchParams.get("q")
-
   const [products, setProducts] = useState([])
 
 
@@ -38,29 +38,33 @@ export const ProductList = () => {
         <Searchbar />
       </div>
 
-      {products.length === 0 && <p className="error-message">No products Found</p>}
+      {query && products.length === 0 && (
+        <p className="error-message">No products found</p>
+      )}
 
 
       <section className="card-section">
         <div className="products">
-
           {products.map((product) => (
-            <div className="product-card" key={product.title}>
-              <img src={product.image} alt={product.title} loading="lazy" />
-              <h4 className="product-title">{product.title}</h4>
-              <h4 className="product-variant">{product.variant}</h4>
+            <Link to={`/compare/${product._id}`}
+              key={product._id}
+              className="product-link"
+            >
+              <div className="products-card" key={product.title}>
+                <img src={product.image} alt={product.title} loading="lazy" />
+                <h4 className="product-title">{product.title}</h4>
+                <h4 className="product-variant">{product.variant}</h4>
 
 
-              <h4 className="product-price">
-                {Math.min(
-                  ...product.stores
-                    .map(store => store.price)
-                    .filter(price => price != null)
-                ) ? `₹${Math.min(...product.stores.map(s => s.price).filter(p => p != null)).toLocaleString()}` : "Price not available"}
-              </h4>
-            </div>
-
-
+                <h4 className="product-price">
+                  {Math.min(
+                    ...product.stores
+                      .map(store => store.price)
+                      .filter(price => price != null)
+                  ) ? `₹${Math.min(...product.stores.map(s => s.price).filter(p => p != null)).toLocaleString()}` : "Price not available"}
+                </h4>
+              </div>
+            </Link>
           ))}
         </div>
       </section>

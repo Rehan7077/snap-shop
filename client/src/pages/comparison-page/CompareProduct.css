@@ -1,0 +1,54 @@
+.comparison-sec {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+.compare-title{
+  text-align: center;
+  margin: 24px;
+}
+.product-header {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.product-header img {
+  width: 200px;
+  border-radius: 15px;
+}
+
+.stores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.store-card {
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.store-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.store-card.best {
+  border: 2px solid #2ecc71;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #2ecc71;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+}
