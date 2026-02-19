@@ -11,7 +11,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cors());
 
-app.use('/products',require('./routes/product.route.js'))
+app.use('/api',require('./routes/product.route.js'))
 
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
