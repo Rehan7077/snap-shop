@@ -21,6 +21,7 @@ nav {
   justify-content: center;
   gap: 12px;
   margin-right: 5px;
+  text-decoration: none;
 }
 .nav-menu :hover {
   color: #111827;
