@@ -2,10 +2,14 @@ require("dotenv").config();
 const express = require("express");
 const connectDB = require("./db.js");
 const cors = require("cors");
+const helmet = require('helmet')
 const errorHandler = require('./middleware/errorHandler.js')
 const app = express();
 
 connectDB();
+
+//security middleware
+app.use(helmet)
 
 app.use(cors());
 app.use(express.json());
