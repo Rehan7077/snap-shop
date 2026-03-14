@@ -1,9 +1,11 @@
 const express = require("express");
 const Product = require("../models/product");
 const router = express.Router();
+const asyncHandler = require("../middleware/asyncHandler");
 
-router.get("/products", async (req, res) => {
-  try {
+router.get(
+  "/products",
+  asyncHandler(async (req, res) => {
     let { search } = req.query;
 
     if (typeof search !== "string") {
@@ -18,15 +20,12 @@ router.get("/products", async (req, res) => {
 
     const products = await Product.find(filter);
     res.status(200).json(products);
-  } catch (error) {
-    res.status(500).json({
-      message: "Server error",
-    });
-  }
-});
+  })
+);
 
-router.get("/products/:id", async (req, res) => {
-  try {
+router.get(
+  "/products/:id",
+  asyncHandler(async (req, res) => {
     if (!req.params.id) {
       return res.status(400).json({
         message: "Missing required paramter: 'id'",
@@ -35,11 +34,7 @@ router.get("/products/:id", async (req, res) => {
     const id = req.params.id;
     const product = await Product.findById(id);
     res.json(product);
-  } catch (err) {
-    res.status(500).json({
-      message: err,
-    });
-  }
-});
+  })
+);
 
 module.exports = router;
