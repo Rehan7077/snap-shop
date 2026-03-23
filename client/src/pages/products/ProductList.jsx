@@ -17,6 +17,7 @@ export const ProductList = () => {
       try {
         const res = await fetch(
           `http://localhost:5000/api/products?search=${query}`
+        
         )
 
         if (!res.ok) throw new Error("Failed to fetch products")
@@ -26,6 +27,7 @@ export const ProductList = () => {
       } catch (err) {
         console.log(err)
       }
+      console.log(query)
     }
 
     fetchProducts()

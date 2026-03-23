@@ -1,15 +1,3 @@
-const Product = require('./models/product.js')
-const productsData = require('./products.json')
-require('dotenv').config()
-const db = require('./db.js')
-db().then(async()=>{
-    try{
-        await Product.insertMany(productsData)
-        console.log('data saved')
-        process.exit(0)
-        
-    }catch(err){
-        process.exit(1)
-        console.log('failed to save products data error:', err)
-    }
-})
+const fetch = fetch('https://unagi.amazon.in/1/events/com.amazon.csm.csa.prod')
+const res = fetch.json();
+console.log(res)

@@ -9,7 +9,7 @@ const app = express();
 connectDB();
 
 //security middleware
-app.use(helmet)
+app.use(helmet())
 
 app.use(cors());
 app.use(express.json());
