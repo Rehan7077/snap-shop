@@ -8,6 +8,7 @@ export const ProductList = () => {
   const [searchParams] = useSearchParams()
   const query = searchParams.get("q")
   const [products, setProducts] = useState([])
+  const [error, setError] = useState('')
 
 
   useEffect(() => {
@@ -22,6 +23,7 @@ export const ProductList = () => {
         if (!res.ok) {
           let errorData = await res.json()
           throw new Error(errorData.message)
+          setError(errorData.message)
         }
         const data = await res.json()
         setProducts(data)
@@ -42,7 +44,7 @@ export const ProductList = () => {
       </div>
 
       {query && products.length === 0 && (
-        <p className="error-message">No products found</p>
+        <p className="error-message">{error}</p>
       )}
 
 
