@@ -15,19 +15,20 @@ export const ProductList = () => {
 
     const fetchProducts = async () => {
       try {
+
         const res = await fetch(
           `http://localhost:5000/api/products?search=${query}`
-        
         )
-
-        if (!res.ok) throw new Error("Failed to fetch products")
-
+        if (!res.ok) {
+          let errorData = await res.json()
+          throw new Error(errorData.message)
+        }
         const data = await res.json()
         setProducts(data)
+
       } catch (err) {
-        console.log(err)
+        console.log("Failed to fetch error", err)
       }
-      console.log(query)
     }
 
     fetchProducts()
