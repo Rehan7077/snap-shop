@@ -1,6 +1,8 @@
 nav {
   width: 100%;
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 1000;
   display: flex;
   justify-content: space-between;
@@ -15,6 +17,7 @@ nav {
   font-weight: 600;
   letter-spacing: 1.5px;
   color: #1d4ed8;
+  background: white;
 }
 .nav-menu {
   display: flex;
@@ -22,6 +25,7 @@ nav {
   gap: 12px;
   margin-right: 5px;
   text-decoration: none;
+  background: white;
 }
 .nav-menu :hover {
   color: #111827;
