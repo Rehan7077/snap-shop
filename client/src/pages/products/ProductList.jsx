@@ -59,7 +59,7 @@ export const ProductList = () => {
           <h4>Results</h4>
         </div>
 
-        {amazon.map((product, idx) => (
+        {amazon.slice(0, 15).map((product, idx) => (
           <ProductCard key={idx} {...product} />
         ))}
       </div>
@@ -70,7 +70,7 @@ export const ProductList = () => {
           <h4>Results</h4>
         </div>
 
-        {flipkart.map((product, idx) => (
+        {flipkart.slice(0, 15).map((product, idx) => (
           <ProductCard key={idx} {...product} />
         ))}
       </div>
