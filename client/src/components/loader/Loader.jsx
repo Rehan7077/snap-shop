@@ -4,7 +4,7 @@ import './Loader.css'
 export const Loader = () => {
     const { loading } = useApp()
 
-    if(!loading) return null  
+    if(!loading) return; 
 
     return (
         <div className="loader-overlay">

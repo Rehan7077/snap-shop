@@ -8,7 +8,6 @@ export const Searchbar = () => {
     const handleSearch = (e) => {
         if (!urlQuery) return;
         navigate(`/products?q=${encodeURIComponent(urlQuery)}`)
-     
     }
 
     return (

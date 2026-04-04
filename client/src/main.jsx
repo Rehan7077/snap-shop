@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from "react-router"
 import App from './App.jsx'
-import { SearchProvider } from './context/SearchContext.jsx'
+import { AppProvider } from './context/AppContext.jsx'
 
 import './index.css'
 
@@ -12,9 +12,9 @@ createRoot(document.getElementById('root')).render(
 
   <StrictMode>
     <BrowserRouter>
-      <SearchProvider>
+      <AppProvider>
         <App />
-      </SearchProvider>
+      </AppProvider>
     </BrowserRouter>
   </StrictMode>
 

@@ -19,9 +19,10 @@ export const AppProvider = ({ children }) => {
             error,
             showLoader,
             hideLoader,
-            hideError
+            hideError,
+            showError
         }}>
             {children}
         </AppContext.Provider>)
 }
-export const useApp = useContext(AppContext)
+export const useApp = () => useContext(AppContext)

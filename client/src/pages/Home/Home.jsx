@@ -16,7 +16,7 @@ export const Home = () => {
                     Find the Best Deals on Mobiles, Laptops, Headphones & More
                 </p>
             </section>
-            <Searchbar />
+            
             <section className='how-it-works'>
                 <div className='section-title'>How SnapShop Works</div>
                 <div className='steps'>

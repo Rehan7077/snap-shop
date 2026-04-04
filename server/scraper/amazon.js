@@ -21,4 +21,4 @@ async function scrapeAmazonList(searchTerm) {
   });
   return products;
 }
-// scrapeAmazonList('iphone').then(console.log)
+module.exports = scrapeAmazonList;

@@ -25,5 +25,5 @@
 
 .ctn-btn:hover {
   background-color: #1d4ed8;
-  transform: translateY(-2px); /* subtle lift */
+  transform: translateY(-2px);
 }
