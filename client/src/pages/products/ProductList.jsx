@@ -57,6 +57,7 @@ export const ProductList = () => {
         <div className="amazon-header">
           <h3 className="logo amazon-logo">Amazon</h3>
           <h4>Results</h4>
+          <h4>{amazon.length} Found</h4>
         </div>
 
         {amazon.slice(0, 15).map((product, idx) => (
@@ -68,6 +69,7 @@ export const ProductList = () => {
         <div className="flipkart-header">
           <h3 className="logo flipkart-logo">Flipkart</h3>
           <h4>Results</h4>
+          <h4>{flipkart.length} Found</h4>
         </div>
 
         {flipkart.slice(0, 15).map((product, idx) => (
