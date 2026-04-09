@@ -14,7 +14,7 @@ async function scrapeAmazonList(searchTerm) {
         title: item.querySelector("a h2 span")?.innerText,
         price: item.querySelector(".a-price-whole")?.innerText,
         rating: item.querySelector(".a-icon-alt")?.innerText,
-        url: item.querySelector("h2 a")?.href,
+        url: item.querySelector("a")?.href,
         image: item.querySelector(".s-image")?.src,
       }))
       .filter((p) => p.title);
