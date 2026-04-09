@@ -43,6 +43,10 @@
   margin: 0;
   line-height: 1.4;
   background: white;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* max 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .product-details p:nth-child(2) {
@@ -58,11 +62,11 @@
   color: #f59e0b;
   background: white;
 }
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .product-card h2 {
     width: 80px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
-} */
+}
