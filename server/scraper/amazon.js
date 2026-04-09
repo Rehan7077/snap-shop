@@ -9,7 +9,7 @@ async function scrapeAmazonList(searchTerm) {
 
   const products = await page.evaluate(() => {
     const items = document.querySelectorAll(".s-result-item[data-asin]");
-    return [...items]
+    return [...items].slice(0, 15)
       .map((item) => ({
         title: item.querySelector("a h2 span")?.innerText,
         price: item.querySelector(".a-price-whole")?.innerText,
@@ -19,6 +19,7 @@ async function scrapeAmazonList(searchTerm) {
       }))
       .filter((p) => p.title);
   });
+  await browser.close();
   return products;
 }
 module.exports = scrapeAmazonList;

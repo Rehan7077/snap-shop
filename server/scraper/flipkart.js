@@ -8,7 +8,7 @@ async function scrapeFlipkartList(searchTerm) {
 
   const products = await page.evaluate(() => {
     const items = document.querySelectorAll(".lvJbLV");
-    return [...items]
+    return [...items].slice(0, 15)
       .map((item) => ({
         title:
           item.querySelector(".RG5Slk")?.innerText ||
