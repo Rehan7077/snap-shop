@@ -12,6 +12,8 @@ export const ProductList = () => {
   const query = searchParams.get("q")
   const [amazon, setAmazon] = useState([])
   const [flipkart, setFlipkart] = useState([])
+  const [selectedAmazonIdx, setSelectedAmazonIdx] = useState(null)
+  const [selectedFlipkartIdx, setSelectedFlipkartIdx] = useState(null)
   const { error, loading, showLoader, hideLoader, showError, hideError } = useApp();
 
 
@@ -19,6 +21,8 @@ export const ProductList = () => {
     if (!query) return;
     setAmazon([])
     setFlipkart([])
+    setSelectedAmazonIdx(null)
+    setSelectedFlipkartIdx(null)
 
     const fetchProducts = async () => {
       showLoader()
@@ -61,7 +65,7 @@ export const ProductList = () => {
         </div>
 
         {amazon.map((product, idx) => (
-          <ProductCard key={idx} {...product} />
+          <ProductCard key={idx} {...product} isSelected={selectedAmazonIdx === idx} onSelect={() => setSelectedAmazonIdx(idx)} />
         ))}
       </div>
 
@@ -73,7 +77,7 @@ export const ProductList = () => {
         </div>
 
         {flipkart.map((product, idx) => (
-          <ProductCard key={idx} {...product} />
+          <ProductCard key={idx} {...product} isSelected={selectedFlipkartIdx === idx} onSelect={()=>setSelectedFlipkartIdx(idx)} />
         ))}
       </div>
     </div>

@@ -1,8 +1,8 @@
 import './ProductCard.css'
-export const ProductCard = ({ title, price, rating, image, url }) => {
+export const ProductCard = ({ title, price, rating, image, url, isSelected, onSelect }) => {
     return (
-        <div className="product-card">
-            <div className="product-img">
+        <div onClick={onSelect} className={`product-card ${isSelected ? 'selected-card' : ''}`}>
+            <div  className="product-img">
                 <img src={image} alt={title} />
             </div>
             <div className="product-details">

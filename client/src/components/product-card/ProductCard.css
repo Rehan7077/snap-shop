@@ -9,6 +9,9 @@
   transition: all 0.2s ease;
   cursor: pointer;
 }
+.selected-card{
+  border: 2px solid rgb(99, 255, 47);
+}
 
 .product-card:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
