@@ -11,5 +11,5 @@ export const ProductCard = ({ title, price, rating, image, url, isSelected, onSe
                 <p>{rating}</p>
             </div>
         </div>
-    )
+    ) 
 }

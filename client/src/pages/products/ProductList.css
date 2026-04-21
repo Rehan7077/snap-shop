@@ -1,7 +1,6 @@
 .product-page {
   display: flex;
   gap: 20px;
-  padding: 20px;
   align-items: flex-start;
   margin-top: 40px;
 }
@@ -18,12 +17,13 @@
 .flipkart-header {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   border-bottom: 1px solid #e5e7eb;
   padding-bottom: 8px;
 }
 
-.logo {
+.logo{
   font-size: 16px;
   font-weight: 600;
   padding: 6px 14px;
@@ -46,6 +46,24 @@
 .product-card {
   margin-bottom: 12px;
 }
+.compare-btn {
+  display: block;
+  margin: 50px auto 0;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.25s ease;
+}
+.compare-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
 
 @media (max-width: 768px) {
   .product-page {
@@ -58,6 +76,3 @@
   }
 }
 
-body {
-  margin: 0;
-}

@@ -55,7 +55,8 @@ export const ProductList = () => {
 
   }, [query])
 
-  return (
+  return (<>
+    <button className="compare-btn">Compare</button>
     <div className="product-page">
       <div className="amazon">
         <div className="amazon-header">
@@ -77,10 +78,11 @@ export const ProductList = () => {
         </div>
 
         {flipkart.map((product, idx) => (
-          <ProductCard key={idx} {...product} isSelected={selectedFlipkartIdx === idx} onSelect={()=>setSelectedFlipkartIdx(idx)} />
+          <ProductCard key={idx} {...product} isSelected={selectedFlipkartIdx === idx} onSelect={() => setSelectedFlipkartIdx(idx)} />
         ))}
       </div>
     </div>
+  </>
   )
 
 }
