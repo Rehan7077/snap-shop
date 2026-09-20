@@ -8,6 +8,6 @@ async function compareService(product) {
   ]);
  
   return { amazon: amazonData, flipkart: flipkartData };
-}
+} 
 
 module.exports = compareService; 

@@ -1,0 +1,272 @@
+[
+  {
+    "title": "iPhone 13",
+    "model": "iPhone 13",
+    "variant": "128GB",
+    "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13.jpg",
+    "stores": [
+      {
+        "name": "Amazon",
+        "price": 52999,
+        "buyLink": "https://www.amazon.in/s?k=iphone+13"
+      },
+      {
+        "name": "Flipkart",
+        "price": 51999,
+        "buyLink": "https://www.flipkart.com/search?q=iphone+13"
+      }
+    ]
+  },
+  {
+    "title": "iPhone 13 Pro",
+    "model": "iPhone 13 Pro",
+    "variant": "128GB",
+    "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-pro.jpg",
+    "stores": [
+      {
+        "name": "Amazon",
+        "price": 79999,
+        "buyLink": "https://www.amazon.in/s?k=iphone+13+pro"
+      },
+      {
+        "name": "Flipkart",
+        "price": 78999,
+        "buyLink": "https://www.flipkart.com/search?q=iphone+13+pro"
+      }
+    ]
+  },
+  {
+    "title": "iPhone 13 Pro Max",
+    "model": "iPhone 13 Pro Max",
+    "variant": "128GB",
+    "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-pro-max.jpg",
+    "stores": [
+      {
+        "name": "Amazon",
+        "price": 89999,
+        "buyLink": "https://www.amazon.in/s?k=iphone+13+pro+max"
+      },
+      {
+        "name": "Flipkart",
+        "price": 88999,
+        "buyLink": "https://www.flipkart.com/search?q=iphone+13+pro+max"
+      }
+    ]
+  },
+  {
+    "title": "iPhone 14",
+    "model": "iPhone 14",
+    "variant": "128GB",
+    "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14.jpg",
+    "stores": [
+      {
+        "name": "Amazon",
+        "price": 58999,
+        "buyLink": "https://www.amazon.in/s?k=iphone+14"
+      },
+      {
+        "name": "Flipkart",
+        "price": 57999,
+        "buyLink": "https://www.flipkart.com/search?q=iphone+14"
+      }
+    ]
+  },
+  {
+    "title": "iPhone 14 Pro",
+    "model": "iPhone 14 Pro",
+    "variant": "128GB",
+    "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14-pro.jpg",
+    "stores": [
+      {
+        "name": "Amazon",
+        "price": 79999,
+        "buyLink": "https://www.amazon.in/s?k=iphone+14+pro"
+      },
+      {
+        "name": "Flipkart",
+        "price": 78999,
+        "buyLink": "https://www.flipkart.com/search?q=iphone+14+pro"
+      }
+    ]
+  },
+  {
+    "title": "iPhone 14 Pro Max",
+    "model": "iPhone 14 Pro Max",
+    "variant": "128GB",
+    "image": "https://rukminim2.flixcart.com/image/430/430/xif0q/mobile/k/s/t/-original-imaghxengzjc2djt.jpeg?q=90",
+    "stores": [
+      {
+        "name": "Amazon",
+        "price": 89999,
+        "buyLink": "https://www.amazon.in/s?k=iphone+14+pro+max"
+      },
+      {
+        "name": "Flipkart",
+        "price": 88999,
+        "buyLink": "https://www.flipkart.com/search?q=iphone+14+pro+max"
+      }
+    ]
+  },
+  {
+    "title": "iPhone 15",
+    "model": "iPhone 15",
+    "variant": "128GB",
+    "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15.jpg",
+    "stores": [
+      {
+        "name": "Amazon",
+        "price": 69999,
+        "buyLink": "https://www.amazon.in/s?k=iphone+15"
+      },
+      {
+        "name": "Flipkart",
+        "price": 68999,
+        "buyLink": "https://www.flipkart.com/search?q=iphone+15"
+      }
+    ]
+  },
+  {
+    "title": "iPhone 15 Pro",
+    "model": "iPhone 15 Pro",
+    "variant": "128GB",
+    "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15-pro.jpg",
+    "stores": [
+      {
+        "name": "Amazon",
+        "price": 134999,
+        "buyLink": "https://www.amazon.in/s?k=iphone+15+pro"
+      },
+      {
+        "name": "Flipkart",
+        "price": 133999,
+        "buyLink": "https://www.flipkart.com/search?q=iphone+15+pro"
+      }
+    ]
+  },
+  {
+    "title": "iPhone 15 Pro Max",
+    "model": "iPhone 15 Pro Max",
+    "variant": "256GB",
+    "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15-pro-max.jpg",
+    "stores": [
+      {
+        "name": "Amazon",
+        "price": 159999,
+        "buyLink": "https://www.amazon.in/s?k=iphone+15+pro+max"
+      },
+      {
+        "name": "Flipkart",
+        "price": 158999,
+        "buyLink": "https://www.flipkart.com/search?q=iphone+15+pro+max"
+      }
+    ]
+  },
+  {
+    "title": "iPhone 16",
+    "model": "iPhone 16",
+    "variant": "256GB",
+    "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16.jpg",
+    "stores": [
+      {
+        "name": "Amazon",
+        "price": 79999,
+        "buyLink": "https://www.amazon.in/s?k=iphone+16"
+      },
+      {
+        "name": "Flipkart",
+        "price": 78999,
+        "buyLink": "https://www.flipkart.com/search?q=iphone+16"
+      }
+    ]
+  },
+  {
+    "title": "iPhone 16 Pro",
+    "model": "iPhone 16 Pro",
+    "variant": "256GB",
+    "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro.jpg",
+    "stores": [
+      {
+        "name": "Amazon",
+        "price": 139999,
+        "buyLink": "https://www.amazon.in/s?k=iphone+16+pro"
+      },
+      {
+        "name": "Flipkart",
+        "price": 138999,
+        "buyLink": "https://www.flipkart.com/search?q=iphone+16+pro"
+      }
+    ]
+  },
+  {
+    "title": "iPhone 16 Pro Max",
+    "model": "iPhone 16 Pro Max",
+    "variant": "256GB",
+    "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-16-pro-max.jpg",
+    "stores": [
+      {
+        "name": "Amazon",
+        "price": 164999,
+        "buyLink": "https://www.amazon.in/s?k=iphone+16+pro+max"
+      },
+      {
+        "name": "Flipkart",
+        "price": 163999,
+        "buyLink": "https://www.flipkart.com/search?q=iphone+16+pro+max"
+      }
+    ]
+  },
+  {
+    "title": "iPhone 17",
+    "model": "iPhone 17",
+    "variant": "256GB",
+    "image": "https://dummyimage.com/400x600/000/fff&text=Upcoming+iPhone+17",
+    "stores": [
+      {
+        "name": "Amazon",
+        "price": 82900,
+        "buyLink": "https://www.amazon.in/iPhone-Pro-256-Promotion-Breakthrough/dp/B0FQG1LPVF/ref=sr_1_1_sspa?dib=eyJ2IjoiMSJ9.58SemCKboeL0A5liQFpD5nUfszl-VY8sXJOPh6pEVkW_B_75jIQrEEON251b0O-2ZkmQiskp4GY6y1Dp8WXSD3OiAz7erVzQUKnaHfibcIVGkjDZjn-BEA1JVEqzAwqRn2ZTphC9sN6KwSUtzpbZs7d7UVPTEvWqwOIbHDkQmEFNczuHvyLJUdGY8LIon5v3Ndsd2VVwsvgYUmXiIuWjFUCiPOstM7EsOE3hTuLyu4Y.PYnPy4VF8UpZ9UCo-Wg34SmztyGS_NSHWFb62iR5zeQ&dib_tag=se&keywords=iphone%2B17&qid=1769245992&sr=8-1-spons&aref=QtLHym9213&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1"
+      },
+      {
+        "name": "Flipkart",
+        "price": 82900,
+        "buyLink": "https://www.flipkart.com/search?q=iphone+17"
+      }
+    ]
+  },
+  {
+    "title": "iPhone 17 Pro",
+    "model": "iPhone 17 Pro",
+    "variant": "256GB",
+    "image": "https://dummyimage.com/400x600/111/fff&text=Upcoming+iPhone+17+Pro",
+    "stores": [
+      {
+        "name": "Amazon",
+        "price": 134900,
+        "buyLink": "https://www.amazon.in/s?k=iphone+17+pro"
+      },
+      {
+        "name": "Flipkart",
+        "price": 134900,
+        "buyLink": "https://www.flipkart.com/search?q=iphone+17+pro"
+      }
+    ]
+  },
+  {
+    "title": "iPhone 17 Pro Max",
+    "model": "iPhone 17 Pro Max",
+    "variant": "256GB",
+    "image": "https://dummyimage.com/400x600/222/fff&text=Upcoming+iPhone+17+Pro+Max",
+    "stores": [
+      {
+        "name": "Amazon",
+        "price": 149900,
+        "buyLink": "https://www.amazon.in/s?k=iphone+17+pro+max"
+      },
+      {
+        "name": "Flipkart",
+        "price": 149900,
+        "buyLink": "https://www.flipkart.com/search?q=iphone+17+pro+max"
+      }
+    ]
+  }
+]

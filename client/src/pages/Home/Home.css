@@ -128,13 +128,10 @@
 }
 
 .logos {
-  display: flex;
-  justify-content: center;
-  gap: 48px;
-  flex-wrap: wrap;
-  align-items: center;
-  transform: translateY(-30px);
+ display: flex;
+ padding-left: 18%
 }
+
 
 .logo-image img {
   height: 200px;

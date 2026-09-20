@@ -5,7 +5,7 @@ import { Searchbar } from '../../components/searchbar/SearchBar'
 import './Home.css'
 
 export const Home = () => {
-   
+
     return (
         <div className="home">
             <section className="hero">
@@ -16,7 +16,7 @@ export const Home = () => {
                     Find the Best Deals on Mobiles, Laptops, Headphones & More
                 </p>
             </section>
-            
+
             <section className='how-it-works'>
                 <div className='section-title'>How SnapShop Works</div>
                 <div className='steps'>
@@ -40,7 +40,9 @@ export const Home = () => {
             <section className='logo-section'>
                 <h3 className='top-stores'>Top Stores</h3>
                 <div className='logos'>
-                    <div className='logo-image'><img src={amazonLogo} alt="Amazon Logo" /></div>
+                    <div className='logo-image'>
+                        <img src={amazonLogo} alt="Amazon Logo" />
+                    </div>
                     <div className="logo-image flipkart">
                         <img src={flipkartLogo} alt="Flipkart Logo" />
                     </div>
