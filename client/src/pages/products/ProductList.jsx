@@ -1,10 +1,8 @@
 import { useSearchParams } from "react-router-dom"
-import { Searchbar } from "../../components/searchbar/SearchBar"
 import { useEffect, useState } from "react"
 import { useApp } from "../../context/AppContext"
-import amazonLogo from '../../assets/logos/amazon.png'
-import flipkartLogo from "../../assets/logos/flipkart.png"
 import { ProductCard } from "../../components/product-card/ProductCard"
+import { Loader } from "../../components/loader/Loader"
 import "./ProductList.css"
 
 export const ProductList = () => {
@@ -12,9 +10,11 @@ export const ProductList = () => {
   const query = searchParams.get("q")
   const [amazon, setAmazon] = useState([])
   const [flipkart, setFlipkart] = useState([])
+  const [amazonLoading, setAmazonLoading] = useState(true);
+  const [flipkartLoading, setFlipkartLoading] = useState(true);
   const [selectedAmazonIdx, setSelectedAmazonIdx] = useState(null)
   const [selectedFlipkartIdx, setSelectedFlipkartIdx] = useState(null)
-  const { error, loading, showLoader, hideLoader, showError, hideError } = useApp();
+  const { error, showLoader, hideLoader, showError, hideError } = useApp();
 
 
   useEffect(() => {
@@ -41,6 +41,8 @@ export const ProductList = () => {
         console.log(data)
         setAmazon(data.amazon)
         setFlipkart(data.flipkart)
+        setAmazonLoading(false)
+        setFlipkartLoading(false)
 
       } catch (err) {
         showError(err)
@@ -65,9 +67,11 @@ export const ProductList = () => {
           <h4>{amazon.length} Found</h4>
         </div>
 
-        {amazon.map((product, idx) => (
+       {amazonLoading ? ( <Loader color="orange"/> ):(
+         amazon.map((product, idx) => (
           <ProductCard key={idx} {...product} isSelected={selectedAmazonIdx === idx} onSelect={() => setSelectedAmazonIdx(idx)} />
-        ))}
+        ))
+       )}
       </div>
 
       <div className="flipkart">
@@ -77,9 +81,9 @@ export const ProductList = () => {
           <h4>{flipkart.length} Found</h4>
         </div>
 
-        {flipkart.map((product, idx) => (
+        {flipkartLoading ? (<Loader color="blue"/>):(flipkart.map((product, idx) => (
           <ProductCard key={idx} {...product} isSelected={selectedFlipkartIdx === idx} onSelect={() => setSelectedFlipkartIdx(idx)} />
-        ))}
+        )))}
       </div>
     </div>
   </>

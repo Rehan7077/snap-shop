@@ -1,14 +1,7 @@
-import { useApp } from '../../context/AppContext'
 import './Loader.css'
 
-export const Loader = () => {
-    const { loading } = useApp()
-
-    if(!loading) return; 
-
+export const Loader = ({ color }) => {
     return (
-        <div className="loader-overlay">
-            <div className="spinner"></div>
-        </div>
+        <div className={color}></div>
     )
 }

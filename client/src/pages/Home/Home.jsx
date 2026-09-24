@@ -1,7 +1,6 @@
 
 import amazonLogo from '../../assets/logos/amazon.png'
 import flipkartLogo from '../../assets/logos/flipkart.png'
-import { Searchbar } from '../../components/searchbar/SearchBar'
 import './Home.css'
 
 export const Home = () => {
