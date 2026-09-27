@@ -4,16 +4,16 @@
   border: 5px solid #ddd;
   border-radius: 50%;
   border-top-color: orange;
-  margin: 15% auto 0 auto;
+  margin: 12% auto 10% auto;
   animation: rotate 1s infinite;
 }
-.blue {
+.blue{
   height: 80px;
   width: 80px;
   border: 5px solid #ddd;
   border-radius: 50%;
   border-top-color: rgb(78, 189, 225);
-  margin: 15% auto 0 auto;
+  margin: 12% auto 10% auto;
   animation: rotate 1s infinite;
 }
 @keyframes rotate {

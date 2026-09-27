@@ -9,6 +9,7 @@ export const Searchbar = () => {
         if (!urlQuery) return;
         navigate(`/products?q=${encodeURIComponent(urlQuery)}`)
     }
+       
 
     return (
         <div className="hero-search">

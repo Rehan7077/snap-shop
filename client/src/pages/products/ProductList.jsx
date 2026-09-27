@@ -14,51 +14,54 @@ export const ProductList = () => {
   const [flipkartLoading, setFlipkartLoading] = useState(true);
   const [selectedAmazonIdx, setSelectedAmazonIdx] = useState(null)
   const [selectedFlipkartIdx, setSelectedFlipkartIdx] = useState(null)
-  const { error, showLoader, hideLoader, showError, hideError } = useApp();
+  const { error, showError, hideError } = useApp();
 
 
   useEffect(() => {
     if (!query) return;
-    setAmazon([])
-    setFlipkart([])
-    setSelectedAmazonIdx(null)
-    setSelectedFlipkartIdx(null)
+
+    setAmazon([]);
+    setFlipkart([]);
+    setSelectedAmazonIdx(null);
+    setSelectedFlipkartIdx(null);
+    setAmazonLoading(true)
+    setFlipkartLoading(true)
 
     const fetchProducts = async () => {
-      showLoader()
-      hideError()
+      hideError();
+
       try {
         const res = await fetch(
           `http://localhost:5000/api/products?search=${query}`
-        )
+        );
 
         if (!res.ok) {
-          let errorData = await res.json()
-          throw new Error(errorData.message)
+          const errorData = await res.json();
+          throw new Error(errorData.message);
         }
 
-        const data = await res.json()
-        console.log(data)
-        setAmazon(data.amazon)
-        setFlipkart(data.flipkart)
-        setAmazonLoading(false)
-        setFlipkartLoading(false)
+        const data = await res.json();
+        console.log(data);
+        setAmazon(data.amazon);
+        setFlipkart(data.flipkart);
 
       } catch (err) {
-        showError(err)
-        console.log("Failed to fetch error", err)
+        showError(err);
+        console.log("Failed to fetch error", err);
+
 
       } finally {
-        hideLoader()
+        setAmazonLoading(false);
+        setFlipkartLoading(false);
       }
-    }
+    };
 
-    fetchProducts()
+    fetchProducts();
 
-  }, [query])
+  }, [query]);
 
   return (<>
-    <button className="compare-btn">Compare</button>
+    {!amazonLoading && !flipkartLoading && <button className="compare-btn">Compare</button>}
     <div className="product-page">
       <div className="amazon">
         <div className="amazon-header">
@@ -67,11 +70,11 @@ export const ProductList = () => {
           <h4>{amazon.length} Found</h4>
         </div>
 
-       {amazonLoading ? ( <Loader color="orange"/> ):(
-         amazon.map((product, idx) => (
-          <ProductCard key={idx} {...product} isSelected={selectedAmazonIdx === idx} onSelect={() => setSelectedAmazonIdx(idx)} />
-        ))
-       )}
+        {amazonLoading ? (<Loader color="orange" />) : (
+          amazon.map((product, idx) => (
+            <ProductCard key={idx} {...product} isSelected={selectedAmazonIdx === idx} onSelect={() => setSelectedAmazonIdx(idx)} />
+          ))
+        )}
       </div>
 
       <div className="flipkart">
@@ -81,7 +84,7 @@ export const ProductList = () => {
           <h4>{flipkart.length} Found</h4>
         </div>
 
-        {flipkartLoading ? (<Loader color="blue"/>):(flipkart.map((product, idx) => (
+        {flipkartLoading ? (<Loader color="blue" />) : (flipkart.map((product, idx) => (
           <ProductCard key={idx} {...product} isSelected={selectedFlipkartIdx === idx} onSelect={() => setSelectedFlipkartIdx(idx)} />
         )))}
       </div>
