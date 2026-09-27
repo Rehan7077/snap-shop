@@ -1,6 +1,6 @@
 import { Navbar } from "./components/navbar/Navbar"
 import { AppRouter } from "./router/AppRouter"
-import { Searchbar } from "./components/searchbar/SearchBar"
+import { Searchbar } from "./components/searchbar/Searchbar"
 
 import './App.css'
 function App() {
