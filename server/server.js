@@ -2,14 +2,13 @@ require("dotenv").config();
 const express = require("express");
 const connectDB = require("./db.js");
 const cors = require("cors");
-const helmet = require('helmet')
-const errorHandler = require('./middleware/errorHandler.js')
+const helmet = require("helmet");
+const errorHandler = require("./middleware/errorHandler.js");
+
 const app = express();
 
 connectDB();
-
-//security middleware
-app.use(helmet())
+app.use(helmet());
 
 app.use(cors());
 app.use(express.json());
@@ -23,11 +22,17 @@ app.use((req, res, next) => {
   });
 });
 
-app.use(errorHandler)
+app.post("/test", async (req, res) => {
+  res.json({
+    message: "Server is working",
+    data: req.body,
+  });
+});
 
-const PORT = process.env.PORT;
+app.use(errorHandler);
+
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`Server is running on ${PORT}`);
 });
-

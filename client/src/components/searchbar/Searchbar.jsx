@@ -1,20 +1,40 @@
-import { useNavigate } from 'react-router-dom'
-import { useState } from 'react'
-import './Searchbar.css'
+import { useNavigate, useSearchParams } from "react-router-dom";
+import { useState } from "react";
+import "./Searchbar.css";
 
 export const Searchbar = () => {
-    const [urlQuery, setUrlQuery] = useState('')
-    const navigate = useNavigate()
-    const handleSearch = (e) => {
-        if (!urlQuery) return;
-        navigate(`/products?q=${encodeURIComponent(urlQuery)}`)
-    }
-       
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
 
-    return (
-        <div className="hero-search">
-            <input type="text" placeholder="Search products..." name='searchbar' value={urlQuery} onChange={(e) => setUrlQuery(e.target.value)} />
-            <button onClick={handleSearch} aria-label='Compare Prices' className="btn-primary">Search Products</button>
-        </div>
-    )
-}
+  const query = searchParams.get("q");
+
+  const [urlQuery, setUrlQuery] = useState(query || "");
+
+  const handleSearch = () => {
+    if (!urlQuery.trim()) return;
+
+    navigate(`/products?q=${encodeURIComponent(urlQuery)}`);
+  };
+
+  return (
+    <div className="hero-search">
+      <input
+        type="text"
+        value={urlQuery}
+        onChange={(e) => setUrlQuery(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") {
+            handleSearch();
+          }
+        }}
+      />
+      <button
+        onClick={handleSearch}
+        aria-label="Compare Prices"
+        className="btn-primary"
+      >
+        Search Products
+      </button>
+    </div>
+  );
+};

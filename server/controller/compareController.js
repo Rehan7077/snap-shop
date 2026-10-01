@@ -9,9 +9,8 @@ const compareContoller = asyncHanlder(async (req, res) => {
     });
   }
   let data = await compareService(product);
-  product = ''
+  product = "";
   return res.json(data);
-  
 });
 
 module.exports = compareContoller;

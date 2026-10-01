@@ -4,4 +4,4 @@ export const Loader = ({ color }) => {
     return (
         <div className={color}></div>
     )
-}
+} 
