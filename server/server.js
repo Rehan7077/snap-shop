@@ -16,18 +16,18 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api", require("./routes/product.route.js"));
 
+
+app.get("/test", async (req, res) => {
+  res.json({
+    message: "Server is working",
+  });
+});
 app.use((req, res, next) => {
   res.status(404).json({
     message: "Route not found",
   });
 });
 
-app.post("/test", async (req, res) => {
-  res.json({
-    message: "Server is working",
-    data: req.body,
-  });
-});
 
 app.use(errorHandler);
 
